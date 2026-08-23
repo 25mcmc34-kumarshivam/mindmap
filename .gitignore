@@ -1,0 +1,26 @@
+# Dependencies (install, don't commit)
+node_modules/
+.puppeteer-cache/
+
+# Build artifacts
+dist/
+build/
+*.spec
+
+# Python
+__pycache__/
+*.pyc
+
+# Runtime / local state
+.markmap_cache/
+shivakshi_config.json
+shivakshi_error.txt
+
+# Generated outputs (PDF/SVG are produced, not shipped)
+*.pdf
+*.svg
+*.png
+
+# OS
+.DS_Store
+Thumbs.db
