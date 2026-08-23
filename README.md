@@ -10,6 +10,7 @@ so you never need a terminal.
 
 ![Pipeline](https://img.shields.io/badge/Markdown-%E2%9E%94%20PDF-8b5cf6)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Download Shivakshi](https://img.shields.io/badge/Download-Shivakshi.exe-8b5cf6?logo=windows)](https://github.com/25mcmc34-kumarshivam/mindmap/releases/download/v1.0.0/Shivakshi-win64-portable.zip)
 
 ---
 
