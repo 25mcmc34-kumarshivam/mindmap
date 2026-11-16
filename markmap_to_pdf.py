@@ -33,6 +33,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import shutil
 import subprocess
@@ -1696,6 +1697,12 @@ def resolve_outputs(args: argparse.Namespace, source: Path | None) -> tuple[Path
 
 
 def validate(args: argparse.Namespace) -> None:
+    for name in ("scale", "zoom", "padding", "max_width", "spacing_vertical",
+                 "spacing_horizontal", "timeout"):
+        value = getattr(args, name)
+        if value is not None and not math.isfinite(value):
+            option = "--" + name.replace("_", "-")
+            raise MarkmapError(f"{option} must be finite.")
     if not 0.1 <= args.scale <= 16:
         raise MarkmapError("--scale must be between 0.1 and 16.")
     if not 0.1 <= args.zoom <= 200:
